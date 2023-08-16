@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-
+        with:
+          submodules: recursive
       - name: Checkout AnyKernel3
         uses: actions/checkout@v3
         with:
@@ -25,7 +26,7 @@ jobs:
           NAME: Tingyu
         with:
           arch: arm64
-          compiler: clang/14/binutils
+          compiler: clang/12/binutils
           defconfig: wayne_defconfig
           image: Image.gz-dtb
       - name: Upload flashable zip file
