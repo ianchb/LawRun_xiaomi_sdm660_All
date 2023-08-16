@@ -3,7 +3,7 @@ name: Build Kernel and Upload Artifacts
 on:
   push:
     branches:
-      - 11.0-eas
+      - master
 
 jobs:
   build:
