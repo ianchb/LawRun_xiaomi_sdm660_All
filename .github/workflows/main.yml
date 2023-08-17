@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - master
+  workflow_run:
+    workflows: [Update submodule]
+    types:
+      - completed
 
 jobs:
   build:
